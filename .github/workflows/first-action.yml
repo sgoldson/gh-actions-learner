@@ -8,5 +8,5 @@ jobs: #jobs to be executed
         run: echo "Howdy Partner!"
       - name: Print Goodbye
         run: | #pipe allows multiple commands/multi-line commands in a single step
-        echo "This is pipin' hot!"
-        echo "Later Homie!"
+          echo "This is pipin' hot!"
+          echo "Later Homie!"
