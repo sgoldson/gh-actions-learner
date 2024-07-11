@@ -1,0 +1,10 @@
+name: First Workflow
+on: workflow_dispatch #event type that allows the user to manually start the workflow
+jobs: #jobs to be executed
+  first-job: #name of initial job
+    runs-on: ubuntu-latest #https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners
+    steps: #steps to be executed
+      - name: Print Greeting
+        run: echo "Howdy Partner!"
+      - name: Print Goodbye
+        run: echo "Later Homie!"
