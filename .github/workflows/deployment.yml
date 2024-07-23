@@ -29,4 +29,8 @@ jobs:
           node-version: 18
       - name: Install Dependencies
         run: npm ci
+      - name: Build Project
+        run: npm run build #uses vite build to build proj
+      - name: Deploy
+        run: echo "Mock Deploy process..."
 
