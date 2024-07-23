@@ -19,6 +19,8 @@ jobs:
       - name: Run Tests
         run: npm test
   Deploy-Code:
+    needs: Run-Code-Tests #indicates that my first job needs to complete before running this job
+                          #multiple jobs can be done with brackets [Run-Code-Tests, Second-Test, etc..]
     runs-on: ubuntu-latest
     steps:
       - name: Get Code from Repo
