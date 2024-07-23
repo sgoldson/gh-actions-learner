@@ -12,6 +12,6 @@ jobs:
           node-version: 18
       - name: Install Dependencies
         run: npm ci #"ci" vs "install", ci uses the versions of packages that are in the package-lock while install does most recent version of package
-        working-directory: ./second-action-react-js/package-lock.json
+        working-directory: second-action-react-js/package-lock.json
       - name: Run Tests
         run: npm test
