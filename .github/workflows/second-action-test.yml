@@ -1,0 +1,16 @@
+name: Second Action - Test Project
+on: push #event that triggers on pushing of a commit
+jobs:
+  test:
+    runs-on: ubuntu-latest #read docs to see pre-installed dependencies such as node.js
+    steps:
+      - name: Get Code from Repo
+        uses: actions/checkout@v3 #this is an offical action from github to get code from current repo
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with: #configurations for used action
+          node-version: 18
+      - name: Install Dependencies
+        run: npm ci #"ci" vs "install", ci uses the versions of packages that are in the package-lock while install does most recent version of package
+      - name: Run Tests
+        run: npm test
