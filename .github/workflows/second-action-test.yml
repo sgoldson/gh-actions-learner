@@ -3,6 +3,10 @@ on: push #event that triggers on pushing of a commit
 jobs:
   test:
     runs-on: ubuntu-latest #read docs to see pre-installed dependencies such as node.js
+    defaults:
+      run:
+        working-directory: second-action-react-js #this sets the working directory for all steps
+                                                  #i have to do this cuz of proj set up
     steps:
       - name: Get Code from Repo
         uses: actions/checkout@v3 #this is an offical action from github to get code from current repo
@@ -12,6 +16,5 @@ jobs:
           node-version: 18
       - name: Install Dependencies
         run: npm ci #"ci" vs "install", ci uses the versions of packages that are in the package-lock while install does most recent version of package
-        working-directory: second-action-react-js
       - name: Run Tests
         run: npm test
