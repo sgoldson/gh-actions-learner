@@ -5,7 +5,7 @@ defaults:
     working-directory: second-action-react-js #this sets the working directory for all steps
                                               #i have to do this cuz of proj set up
 jobs:
-  Run Code Tests: #can be named anything, it's the jobs title
+  Run-Code-Tests: #can be named anything, it's the jobs title
     runs-on: ubuntu-latest #read docs to see pre-installed dependencies such as node.js
     steps:
       - name: Get Code from Repo
@@ -18,7 +18,7 @@ jobs:
         run: npm ci #"ci" vs "install", ci uses the versions of packages that are in the package-lock while install does most recent version of package
       - name: Run Tests
         run: npm test
-  Deploy Code:
+  Deploy-Code:
     runs-on: ubuntu-latest
     steps:
       - name: Get Code from Repo
