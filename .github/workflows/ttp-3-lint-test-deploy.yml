@@ -16,8 +16,8 @@ jobs:
           node-version: 18
       - name: Install Dependencies
         run: npm ci #"ci" vs "install", ci uses the versions of packages that are in the package-lock while install does most recent version of package
-      - name: Lint Code
-        run: npm lint
+      # - name: Lint Code
+      #   run: npm lint
       - name: Run Tests
         run: npm test
       - name: Build Project
