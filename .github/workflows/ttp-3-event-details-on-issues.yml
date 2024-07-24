@@ -1,9 +1,5 @@
 name: TTP-3 Output Event Details on "issues"
 on: [issues, workflow_dispatch] #runs when an issue in repo is created/modified
-defaults:
-  run:
-    working-directory: time-to-practice-3 #this sets the working directory for all steps
-                                              #i have to do this cuz of proj set up
 jobs:
   Output-Event-Details: #can be named anything, it's the jobs title
     runs-on: ubuntu-latest #read docs to see pre-installed dependencies such as node.js
