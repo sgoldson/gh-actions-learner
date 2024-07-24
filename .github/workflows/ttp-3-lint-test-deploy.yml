@@ -1,5 +1,6 @@
 name: TTP-3 Lint, Test, Deploy
-on: [push, workflow_dispatch] #allow to be triggered on push or manually, can be unlimited options
+#on: [push, workflow_dispatch] #allow to be triggered on push or manually, can be unlimited options
+on: [workflow_dispatch] #allow to be triggered on push or manually, can be unlimited options
 defaults:
   run:
     working-directory: time-to-practice-3 #this sets the working directory for all steps

@@ -1,5 +1,6 @@
 name: Second Action - Test Project
-on: push #event that triggers on pushing of a commit
+#on: push #event that triggers on pushing of a commit
+on: workflow_dispatch #event that triggers on pushing of a commit
 jobs:
   test:
     runs-on: ubuntu-latest #read docs to see pre-installed dependencies such as node.js
